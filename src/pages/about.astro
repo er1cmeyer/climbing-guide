@@ -1,0 +1,25 @@
+---
+import RouteDetailLayout from '../layouts/route-detail.astro';
+---
+
+<RouteDetailLayout
+    title="About | Climbing Guide"
+    bodyClass="font-sans p-12 bg-white text-red-600"
+>
+    <a href="/" class="text-[0.8rem] font-bold uppercase tracking-[0.18em] opacity-60 transition-opacity hover:opacity-100">← All Routes</a>
+    <h1 class="font-yellowtail text-6xl text-pretty">About</h1>
+    <article class="grid gap-6 font-light [&_h2]:mt-2 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase [&_p]:m-0">
+        <div>
+            <h2>The Gunks</h2>
+            <p>The Shawangunk Mountains — the Gunks — rise above the Hudson Valley in New Paltz, New York. The cliffs are made of hard quartzite conglomerate, swept clean by glaciers and eroded into the horizontal crack systems and roofs that define the area's climbing.</p>
+        </div>
+        <div>
+            <h2>This Guide</h2>
+            <p>A personal selection of Gunks routes — mostly at the Trapps, the main cliff band — with notes on what makes each climb worth doing. Routes range from moderate single-pitch introductions to sustained roof problems.</p>
+        </div>
+        <div>
+            <h2>Getting There</h2>
+            <p>The Trapps and Near Trapps are accessed from the Mohonk Preserve. A day pass is required. The carriage road trail runs below the cliff and connects all the major buttresses.</p>
+        </div>
+    </article>
+</RouteDetailLayout>
