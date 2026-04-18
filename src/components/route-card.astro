@@ -1,0 +1,25 @@
+---
+interface Props {
+  area?: string;
+  href: string;
+  rating: string | number;
+  route: string;
+}
+
+const { area, href, rating, route } = Astro.props;
+const routeArea = area ?? 'Area unknown';
+const routeSearch = `${route} ${rating} G ${routeArea}`.toLowerCase();
+---
+
+<li class="min-w-0">
+  <a
+    class="route-card grid min-h-full gap-[0.45rem] rounded-[0.4rem] border border-red-600/20 bg-white p-4 text-red-600 transition-[background-color,border-color,transform] duration-150 ease-in hover:-translate-y-px hover:border-red-600/40 hover:bg-red-600/4 focus-visible:-translate-y-px focus-visible:border-red-600/40 focus-visible:bg-red-600/4 focus-visible:outline-hidden max-sm:p-[0.9rem]"
+    href={href}
+    data-route-card
+    data-route-search={routeSearch}
+  >
+    <div class="route-name font-yellowtail text-[clamp(2rem,4vw,2.4rem)] leading-[0.95] text-pretty max-sm:text-[1.9rem]">{route}</div>
+    <div class="route-grade text-[0.95rem] font-bold uppercase tracking-[0.12em]">{rating} G</div>
+    <div class="route-area text-[0.95rem] font-normal text-red-600/75">{routeArea}</div>
+  </a>
+</li>

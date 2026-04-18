@@ -1,0 +1,24 @@
+---
+import RouteDetailLayout from '../layouts/route-detail.astro';
+
+interface Props {
+  area?: string;
+  route: string;
+  rating: string | number;
+  Content: any;
+}
+
+const { area, route, rating, Content } = Astro.props;
+---
+
+<RouteDetailLayout
+    title={`${route} | Climbing Guide`}
+    bodyClass="font-sans p-12 bg-white text-red-600"
+>
+    {area && <div>{area}</div>}
+    <h1 class="font-yellowtail text-6xl text-pretty">{route}</h1>
+    <h2 class="text-2xl font-semibold uppercase">{rating} G</h2>
+    <article class="grid gap-4 font-light [&_h2:first-child]:mt-0 [&_h2]:mt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:uppercase [&_p]:m-0">
+        <Content />
+    </article>
+</RouteDetailLayout>

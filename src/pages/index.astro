@@ -1,4 +1,96 @@
 ---
+import {getCollection} from 'astro:content';
+import RouteCard from '../components/route-card.astro';
+import RouteLayout from '../layouts/route.astro';
 
+const routes = await getCollection('routes');
+const orderCollator = new Intl.Collator(undefined, {
+    numeric: true,
+    sensitivity: 'base',
+});
+
+const orderedRoutes = routes.sort((left, right) =>
+    orderCollator.compare(String(left.data.order), String(right.data.order))
+);
 ---
-<h1>Astro</h1>
+<RouteLayout title="Routes | Climbing Guide">
+    <div class="bg-red-600 px-6 pt-6 pb-2">
+        <div id="header">
+            <div class="mx-auto max-w-4xl">
+                <div class="text-[0.8rem] font-bold uppercase tracking-[0.18em]">gunks.climbing.guide</div>
+                <h1 class="font-yellowtail py-4 md:py-12 text-6xl md:text-8xl font-extrabold text-pretty -skew-4">Gunks Routes</h1>
+
+                <div class="grid gap-1.5 py-4">
+                    <label class="text-[0.8rem] font-bold uppercase tracking-[0.12em]" for="route-search">Search routes</label>
+                    <input
+                            id="route-search"
+                            class="w-full rounded-[0.4rem] border border-white/30 bg-white/8 px-4 py-[0.85rem] font-inherit text-white placeholder:text-white/60 focus:border-white/70 focus:outline-2 focus:outline-white/15 focus:outline-offset-2"
+                            type="search"
+                            name="route-search"
+                            placeholder="Filter by route, grade, or area"
+                            autocomplete="off"
+                            spellcheck="false"
+                            data-route-filter-input
+                    />
+                    <p class="m-0 text-[0.95rem] text-white/75" data-route-filter-status aria-live="polite">
+                        Showing {orderedRoutes.length} routes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white px-6 pr-7 text-red-600">
+        <div class="mx-auto grid max-w-4xl gap-4 py-4">
+            <p class="m-0 rounded-[0.4rem] border border-dashed border-red-600/30 p-4 text-red-600" data-route-filter-empty hidden>No routes match that search.</p>
+            <ul class="routes-grid grid list-none grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[0.9rem] p-0" aria-label="Route catalog" data-route-filter-grid>
+                {orderedRoutes.map((route) => (
+                    <RouteCard
+                        href={`/routes/${route.id}/`}
+                        route={route.data.route}
+                        rating={route.data.rating}
+                        area={route.data.area}
+                    />
+                ))}
+            </ul>
+        </div>
+    </div>
+</RouteLayout>
+
+<script is:inline>
+    const input = document.querySelector('[data-route-filter-input]');
+    const grid = document.querySelector('[data-route-filter-grid]');
+    const cards = Array.from(document.querySelectorAll('[data-route-card]'));
+    const status = document.querySelector('[data-route-filter-status]');
+    const empty = document.querySelector('[data-route-filter-empty]');
+
+    if (input instanceof HTMLInputElement && grid && status && empty) {
+        const updateResults = () => {
+            const query = input.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            for (const card of cards) {
+                const matches = query === '' || card.dataset.routeSearch?.includes(query);
+                const item = card.closest('li');
+
+                if (!item) {
+                    continue;
+                }
+
+                item.hidden = !matches;
+                if (matches) {
+                    visibleCount += 1;
+                }
+            }
+
+            const label = visibleCount === 1 ? 'route' : 'routes';
+            status.textContent = query
+                ? `Showing ${visibleCount} ${label} for "${input.value.trim()}"`
+                : `Showing ${visibleCount} ${label}`;
+            empty.hidden = visibleCount !== 0;
+        };
+
+        input.addEventListener('input', updateResults);
+        updateResults();
+    }
+</script>
