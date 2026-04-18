@@ -8,7 +8,7 @@ backend:
 site_url: https://climbing-guide.netlify.app
 display_url: https://climbing-guide.netlify.app
 logo:
-  src: /admin/gunks-routes-logo.svg
+  src: /admin/gunks-routes-logo.png
   show_in_header: true
 media_folder: public/uploads
 public_folder: /uploads

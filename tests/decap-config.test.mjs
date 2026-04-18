@@ -5,11 +5,10 @@ import { existsSync, readFileSync } from 'node:fs';
 test('decap admin files exist and target the routes content collection', () => {
   assert.equal(existsSync(new URL('../public/admin/index.html', import.meta.url)), true);
   assert.equal(existsSync(new URL('../public/admin/config.yml', import.meta.url)), true);
-  assert.equal(existsSync(new URL('../public/admin/gunks-routes-logo.svg', import.meta.url)), true);
+  assert.equal(existsSync(new URL('../public/admin/gunks-routes-logo.png', import.meta.url)), true);
 
   const html = readFileSync(new URL('../public/admin/index.html', import.meta.url), 'utf8');
   const config = readFileSync(new URL('../public/admin/config.yml', import.meta.url), 'utf8');
-  const logo = readFileSync(new URL('../public/admin/gunks-routes-logo.svg', import.meta.url), 'utf8');
 
   assert.match(html, /decap-cms@\^3\.0\.0\/dist\/decap-cms\.js/);
   assert.match(html, /<title>Gunks Routes<\/title>/);
@@ -18,7 +17,7 @@ test('decap admin files exist and target the routes content collection', () => {
   assert.match(config, /branch:\s+master/);
   assert.match(config, /site_url:\s+https:\/\/climbing-guide\.netlify\.app/);
   assert.match(config, /display_url:\s+https:\/\/climbing-guide\.netlify\.app/);
-  assert.match(config, /logo:\s*\n\s+src:\s+\/admin\/gunks-routes-logo\.svg/);
+  assert.match(config, /logo:\s*\n\s+src:\s+\/admin\/gunks-routes-logo\.png/);
   assert.match(config, /show_in_header:\s+true/);
   assert.match(config, /media_folder:\s+public\/uploads/);
   assert.match(config, /public_folder:\s+\/uploads/);
@@ -28,6 +27,4 @@ test('decap admin files exist and target the routes content collection', () => {
   assert.match(config, /name:\s+area/);
   assert.match(config, /name:\s+order/);
   assert.match(config, /name:\s+body/);
-  assert.match(logo, /Yellowtail/);
-  assert.match(logo, /Gunks Routes/);
 });
