@@ -1,0 +1,21 @@
+---
+import RouteLayout from './route.astro';
+
+interface Props {
+  title?: string;
+  bodyClass?: string;
+}
+
+const {
+  title = 'Climbing Guide',
+  bodyClass = 'font-sans bg-red-600 text-white',
+} = Astro.props;
+---
+
+<RouteLayout
+  title={title}
+  bodyClass={bodyClass}
+  containerClass="mx-auto space-y-4 relative md:max-w-6xl"
+>
+  <slot />
+</RouteLayout>
