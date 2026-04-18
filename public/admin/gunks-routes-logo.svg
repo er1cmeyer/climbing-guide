@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" role="img" aria-labelledby="title desc">
+  <title id="title">Gunks Routes</title>
+  <desc id="desc">Gunks Routes wordmark in Yellowtail.</desc>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+    .wordmark {
+      fill: #f5c542;
+      font-family: "Yellowtail", cursive;
+      font-size: 92px;
+      paint-order: stroke fill;
+      stroke: rgba(0, 0, 0, 0.18);
+      stroke-width: 3px;
+    }
+  </style>
+  <rect width="560" height="180" rx="24" fill="none" />
+  <text class="wordmark" x="24" y="118">Gunks Routes</text>
+</svg>
