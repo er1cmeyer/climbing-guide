@@ -11,7 +11,7 @@ test('homepage renders routes as a compact grid of tiles', () => {
 
   const html = readFileSync(new URL('../dist/index.html', import.meta.url), 'utf8');
 
-  assert.match(html, /<body class="[^"]*bg-red-600[^"]*text-white[^"]*">/);
+  assert.match(html, /<body class="[^"]*bg-base-100-content[^"]*text-base-100[^"]*">/);
   assert.match(html, /class="[^"]*routes-grid[^"]*"/);
   assert.match(html, /class="[^"]*route-card[^"]*"/);
   assert.match(html, /class="[^"]*route-name[^"]*"/);
@@ -41,7 +41,7 @@ test('route detail pages use reversed colors', () => {
   const html = readFileSync(new URL('../dist/routes/apoplexy/index.html', import.meta.url), 'utf8');
   const routePageSource = readFileSync(new URL('../src/components/route-page.astro', import.meta.url), 'utf8');
 
-  assert.match(html, /<body class="[^"]*bg-white[^"]*text-red-600[^"]*">/);
+  assert.match(html, /<body class="[^"]*bg-base-100[^"]*text-base-100-content[^"]*">/);
   assert.match(html, /class="[^"]*md:max-w-6xl[^"]*"/);
   assert.match(routePageSource, /import RouteDetailLayout from ['"]\.\.\/layouts\/route-detail\.astro['"]/);
 });
