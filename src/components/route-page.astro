@@ -13,7 +13,7 @@ const { area, route, rating, Content } = Astro.props;
 
 <RouteDetailLayout
     title={`${route} | Climbing Guide`}
-    bodyClass="font-sans bg-base-100 p-12 text-base-100-content"
+    bodyClass="font-sans bg-base-100 p-12 text-base-100-content max-w-4xl mx-auto"
 >
     {area && <div>{area}</div>}
     <h1 class="font-yellowtail text-6xl text-pretty">{route}</h1>
