@@ -4,9 +4,105 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Content Manager</title>
+    <title>Gunks Routes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      [data-gunks-routes-brand] {
+        color: #f5c542;
+        display: inline-flex;
+        font-family: "Yellowtail", cursive;
+        font-size: clamp(1.9rem, 1.4rem + 1.2vw, 2.8rem);
+        line-height: 1;
+        padding: 0.1rem 0 0.15rem;
+        text-decoration: none;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+      }
+    </style>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      (() => {
+        const brandText = 'Gunks Routes';
+        const candidateSelectors = [
+          'header a',
+          'header [role="link"]',
+          'nav a',
+          'a[href="#/"]',
+          'a[href="/admin/#/"]',
+          'a[href="/admin/"]',
+        ];
+
+        function createBrandNode() {
+          const brand = document.createElement('span');
+          brand.dataset.gunksRoutesBrand = 'true';
+          brand.textContent = brandText;
+          return brand;
+        }
+
+        function looksLikeLogoCandidate(element) {
+          if (!element || element.dataset.gunksRoutesBrandApplied === 'true') {
+            return false;
+          }
+
+          const text = (element.textContent || '').trim().toLowerCase();
+          if (text.includes('decap') || text.includes('content manager')) {
+            return true;
+          }
+
+          const hasGraphic = !!element.querySelector('svg, img');
+          const rect = element.getBoundingClientRect();
+          return hasGraphic && rect.top < 140 && rect.left < 320;
+        }
+
+        function swapBrand(element) {
+          if (!looksLikeLogoCandidate(element)) {
+            return false;
+          }
+
+          element.dataset.gunksRoutesBrandApplied = 'true';
+          element.setAttribute('aria-label', brandText);
+          element.replaceChildren(createBrandNode());
+          return true;
+        }
+
+        function applyBranding() {
+          for (const selector of candidateSelectors) {
+            const nodes = document.querySelectorAll(selector);
+            for (const node of nodes) {
+              if (swapBrand(node)) {
+                return true;
+              }
+            }
+          }
+
+          const fallbackNodes = document.querySelectorAll('a, button, div, span');
+          for (const node of fallbackNodes) {
+            if (swapBrand(node)) {
+              return true;
+            }
+          }
+
+          return false;
+        }
+
+        const observer = new MutationObserver(() => {
+          if (applyBranding()) {
+            observer.disconnect();
+          }
+        });
+
+        if (!applyBranding()) {
+          observer.observe(document.body, { childList: true, subtree: true });
+          window.addEventListener('load', applyBranding, { once: true });
+        }
+      })();
+    </script>
   </body>
 </html>

@@ -10,6 +10,10 @@ test('decap admin files exist and target the routes content collection', () => {
   const config = readFileSync(new URL('../public/admin/config.yml', import.meta.url), 'utf8');
 
   assert.match(html, /decap-cms@\^3\.0\.0\/dist\/decap-cms\.js/);
+  assert.match(html, /<title>Gunks Routes<\/title>/);
+  assert.match(html, /fonts\.googleapis\.com\/css2\?family=Yellowtail/);
+  assert.match(html, /data-gunks-routes-brand/);
+  assert.match(html, /Gunks Routes/);
   assert.match(config, /name:\s+github/);
   assert.match(config, /repo:\s+er1cmeyer\/climbing-guide/);
   assert.match(config, /branch:\s+master/);
