@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: er1cmeyer/climbing-guide
+  branch: develop
+  # Netlify handles the OAuth server for the default GitHub backend flow.
+  # Leave base_url/auth_endpoint unset unless you move auth off Netlify.
+
+site_url: https://climbing-guide.netlify.app
+display_url: https://climbing-guide.netlify.app
+
+collections:
+  - name: routes
+    label: Routes
+    label_singular: Route
+    folder: src/content/routes
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields:
+      - { label: Route, name: route, widget: string }
+      - { label: Rating, name: rating, widget: string }
+      - { label: Area, name: area, widget: string, required: false }
+      - { label: Order, name: order, widget: number, value_type: int, min: 0 }
+      - { label: Body, name: body, widget: markdown }
