@@ -4,8 +4,7 @@ rating: "5.5"
 area: Trapps
 order: 3
 ---
-One of the standout single-pitch 5.5s at the Trapps, with surprisingly steep climbing for the grade.
+Get on it when you can ...easy, exposed and fun.  Place low in the corner before the traverse. Green C4 in the traverse, and then flip the rope over the corner to protect after the traverse. Don't screw up and pin the rope to the face after the nose, wait until you move up a bit before placing pro. 
 
-Start at the crack system below the big hanging corner, between Nosedive and Laurel. Climb into the right-facing corner
-
-A direct finish through the corner is also possible and climbs a little harder, with better finger locks and strong protection.
+## Note:
+Traffic noise is a real pain in the butt here, so wait between cars to communicate. A 70m rope will get you down in one shot. 
