@@ -1,14 +1,12 @@
 ---
-route: 'Retribution'
-rating: '5.10b'
-area: 'Trapps'
+route: Retribution
+rating: 5.10b
+area: Trapps
 order: 1
 ---
-The companion line immediately left of Nosedive, with a distinct crux at the roof.
+Crimp out right on the face for the crux, the move is getting your right hand in the crack after pulling into the corner. Stem early, and drop a nut. Eats nuts like... well, you know...
 
-Follow the right-facing dihedral to the small roof. Gear is a little fiddly approaching and through the crux, but once the move goes, the climbing backs off. Head right near the top to join Nosedive.
-
-Rappel from the shared anchor with one rope.
+Move left onto the face at the top. 
 
 ## Anchor
-Shared two-bolt anchor with Nosedive.
+Bolts at the top, TR No Solution and Nosedive if you want.  
