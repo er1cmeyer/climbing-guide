@@ -22,6 +22,8 @@ collections:
     extension: md
     format: frontmatter
     slug: '{{slug}}'
+    sortable_fields: ['order', 'route', 'rating']
+    summary: '{{order}} - {{route}} {{area}}'
     fields:
       - { label: Route, name: route, widget: string }
       - { label: Rating, name: rating, widget: string }

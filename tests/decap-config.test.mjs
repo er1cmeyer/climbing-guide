@@ -22,6 +22,8 @@ test('decap admin files exist and target the routes content collection', () => {
   assert.match(config, /media_folder:\s+public\/uploads/);
   assert.match(config, /public_folder:\s+\/uploads/);
   assert.match(config, /folder:\s+src\/content\/routes/);
+  assert.match(config, /sortable_fields:\s+\['order',\s+'route',\s+'rating'\]/);
+  assert.match(config, /summary:\s+'?\{\{order\}\}\s+-\s+\{\{route\}\}\s+\{\{area\}\}'?/);
   assert.match(config, /name:\s+route/);
   assert.match(config, /name:\s+rating/);
   assert.match(config, /name:\s+area/);
