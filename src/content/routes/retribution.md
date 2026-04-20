@@ -8,5 +8,8 @@ Crimp out right on the face for the crux, the move is getting your right hand in
 
 Move left onto the face at the top. 
 
+## Gear
+Nothing bigger than 1 inch. 
+
 ## Anchor
 Bolts at the top, TR No Solution and Nosedive if you want.  
