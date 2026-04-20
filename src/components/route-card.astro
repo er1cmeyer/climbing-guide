@@ -13,13 +13,13 @@ const routeSearch = `${route} ${rating} G ${routeArea}`.toLowerCase();
 
 <li class="min-w-0">
   <a
-    class="route-card grid min-h-full gap-[0.45rem] rounded-[0.4rem] border border-base-100-content/20 bg-base-100 p-4 text-base-100-content transition-[background-color,border-color,transform] duration-150 ease-in hover:-translate-y-px hover:border-base-100-content/40 hover:bg-base-100-content/4 focus-visible:-translate-y-px focus-visible:border-base-100-content/40 focus-visible:bg-base-100-content/4 focus-visible:outline-hidden max-sm:p-[0.9rem]"
+    class="route-card grid min-h-full gap-[0.45rem] rounded-[0.4rem] group border border-base-100-content/20 bg-base-100 p-4 text-base-100-content transition-[background-color,border-color,transform] duration-150 ease-in hover:-translate-y-px hover:border-accent/40 hover:bg-base-100-content/4 focus-visible:-translate-y-px focus-visible:border-base-100-content/40 focus-visible:bg-base-100-content/4 focus-visible:outline-hidden max-sm:p-[0.9rem]"
     href={href}
     data-route-card
     data-route-search={routeSearch}
   >
     <div class="route-name font-yellowtail text-[clamp(2rem,4vw,2.4rem)] leading-[0.95] text-pretty max-sm:text-[1.9rem]">{route}</div>
-    <div class="route-grade text-[0.95rem] font-bold uppercase tracking-[0.12em]">{rating} G</div>
+    <div class="route-grade text-[0.95rem] font-bold uppercase tracking-[0.12em]">{rating}</div>
     <div class="route-area text-[0.95rem] font-normal text-base-100-content/75">{routeArea}</div>
   </a>
 </li>
