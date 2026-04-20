@@ -28,5 +28,5 @@ collections:
       - { label: Route, name: route, widget: string }
       - { label: Rating, name: rating, widget: string }
       - { label: Area, name: area, widget: string, required: false }
-      - { label: Order, name: order, widget: number, value_type: int, min: 0 }
+      - { label: Order, name: order, widget: number, value_type: float, min: 0, step: 0.01 }
       - { label: Body, name: body, widget: markdown }

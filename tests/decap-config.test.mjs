@@ -28,5 +28,6 @@ test('decap admin files exist and target the routes content collection', () => {
   assert.match(config, /name:\s+rating/);
   assert.match(config, /name:\s+area/);
   assert.match(config, /name:\s+order/);
+  assert.match(config, /label:\s+Order,\s+name:\s+order,\s+widget:\s+number,\s+value_type:\s+float,\s+min:\s+0,\s+step:\s+0\.01/);
   assert.match(config, /name:\s+body/);
 });
