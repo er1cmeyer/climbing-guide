@@ -4,11 +4,8 @@ rating: "5.9"
 area: Trapps
 order: 4
 ---
-An excellent Uberfall pitch with a little of everything: insecure face climbing, sparse-feeling gear down low, and a better-protected finish.
-
-Start about 10' right of Horseman and head for the small loose flake. 
-
-Finish by moving right to the chains.
+Whaaaaaaa! don't worry about the flake, just crank the sloper for the 5.8 move after it. You can get an offset RP off to the right of the flake. Layback into a stance, gaston up right, and into a kneebar. Slap a purple Z4 and then crank the roof trending right. 
 
 ## Anchor
-Chains at the top.
+
+Chains at the top. Toprope Coronary after.
