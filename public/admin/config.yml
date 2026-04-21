@@ -12,6 +12,15 @@ logo:
   show_in_header: true
 media_folder: public/uploads
 public_folder: /uploads
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: duxnrxcjx
+    api_key: '525961968994667'
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+          crop: limit
 
 collections:
   - name: routes
