@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: er1cmeyer/climbing-guide
+  name: git-gateway
   branch: master
-  # Netlify handles the OAuth server for the default GitHub backend flow.
-  # Leave base_url/auth_endpoint unset unless you move auth off Netlify.
 
 site_url: https://climbing-guide.netlify.app
 display_url: https://climbing-guide.netlify.app

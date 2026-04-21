@@ -13,9 +13,14 @@ test('decap admin files exist and target the routes content collection', () => {
   assert.match(html, /decap-cms@\^3\.0\.0\/dist\/decap-cms\.js/);
   assert.match(html, /decap-cms-media-library-cloudinary@\^3\.0\.0\/dist\/decap-cms-media-library-cloudinary\.js/);
   assert.match(html, /CMS\.registerMediaLibrary\(DecapCmsMediaLibraryCloudinary\)/);
+  assert.match(html, /identity\.netlify\.com\/v1\/netlify-identity-widget\.js/);
+  assert.match(html, /window\.netlifyIdentity\.on\s*\(\s*['"]init['"]/);
+  assert.match(html, /window\.netlifyIdentity\.on\s*\(\s*['"]login['"]/);
+  assert.match(html, /window\.netlifyIdentity\.init\(\)/);
+  assert.match(html, /document\.location\.href\s*=\s*['"]\/admin\/['"]/);
   assert.match(html, /<title>Gunks Routes<\/title>/);
-  assert.match(config, /name:\s+github/);
-  assert.match(config, /repo:\s+er1cmeyer\/climbing-guide/);
+  assert.match(config, /name:\s+git-gateway/);
+  assert.doesNotMatch(config, /repo:\s+er1cmeyer\/climbing-guide/);
   assert.match(config, /branch:\s+master/);
   assert.match(config, /site_url:\s+https:\/\/climbing-guide\.netlify\.app/);
   assert.match(config, /display_url:\s+https:\/\/climbing-guide\.netlify\.app/);
