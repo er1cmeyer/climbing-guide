@@ -36,5 +36,12 @@ const {
         Made for friends, in the Gunks.
     </footer>
 </div>
+<script is:inline>
+    const identityTokenPattern = /^(#(?:invite|confirmation|recovery|email_change)_token=)/;
+
+    if (window.location.pathname === '/' && identityTokenPattern.test(window.location.hash)) {
+        window.location.replace(`/admin/${window.location.hash}`);
+    }
+</script>
 </body>
 </html>

@@ -24,6 +24,9 @@ test('homepage renders routes as a compact grid of tiles', () => {
   assert.match(html, /data-route-search=/);
   assert.match(html, /data-route-filter-status/);
   assert.match(html, /data-route-filter-empty/);
+  assert.match(html, /window\.location\.hash/);
+  assert.match(html, /#\(\?:invite\|confirmation\|recovery\|email_change\)_token=/);
+  assert.match(html, /window\.location\.replace\(`\/admin\/\$\{window\.location\.hash\}`\)/);
   assert.match(html, /id="header"/);
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">/);
   assert.match(html, /<meta name="theme-color" content="#dc2626">/);
