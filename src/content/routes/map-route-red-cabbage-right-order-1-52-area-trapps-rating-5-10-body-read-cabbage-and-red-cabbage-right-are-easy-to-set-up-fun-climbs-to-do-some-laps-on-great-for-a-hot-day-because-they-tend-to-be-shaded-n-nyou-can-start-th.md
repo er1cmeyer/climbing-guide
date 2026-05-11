@@ -14,4 +14,7 @@ You can start this climb in two ways:
 Either way, climb the typical north facing gunks wall style climbing to the middle of the block. (Overhanging, jagged and kinda juggy)
 
 ## Anchor
+
 Gear anchor utilizing the massive boulder on the north east corner of the Gerdie block. Purple and green cams. 
+
+![route photo of Red Cabbage Right](https://res.cloudinary.com/duxnrxcjx/image/upload/c_limit,f_auto,q_auto/v1778511968/red_cabbage_right.jpg "Red Cabbage Right")
