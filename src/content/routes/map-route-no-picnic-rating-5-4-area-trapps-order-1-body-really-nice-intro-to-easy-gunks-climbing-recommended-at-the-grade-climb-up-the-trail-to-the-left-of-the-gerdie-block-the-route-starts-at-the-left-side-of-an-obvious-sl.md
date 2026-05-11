@@ -11,3 +11,5 @@ Begin at the left side of a slab up the hill from the Gerdie Block. Climb the sl
 ## Anchor
 
 Bolts, TR the stuff to the right if you want some decent 5.8 pulling. Make sure to put in a directional.
+
+![Image of the route No Picnic](https://res.cloudinary.com/duxnrxcjx/image/upload/c_limit,f_auto,q_auto/v1778512419/IMG_2256_cnkuth.jpg "Climber on No Picnic")
