@@ -15,3 +15,5 @@ Small purple, green and the big gray #4 or purple cam #5 for directionals - the 
 Takes nearly everything from big cam to large nuts. 
 
 > Note: top edge of the climb is sharp. Make sure to protect toprope gear from abrasion.
+
+![](https://res.cloudinary.com/duxnrxcjx/image/upload/c_limit,f_auto,q_auto/v1778510281/IMG_4167_gkwqxj.jpg)
