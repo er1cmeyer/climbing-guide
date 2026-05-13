@@ -1,18 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" role="img" aria-labelledby="title desc">
-  <title id="title">Gunks Routes</title>
-  <desc id="desc">Gunks Routes wordmark in Yellowtail.</desc>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-
-    .wordmark {
-      fill: #f5c542;
-      font-family: "Yellowtail", cursive;
-      font-size: 92px;
-      paint-order: stroke fill;
-      stroke: rgba(0, 0, 0, 0.18);
-      stroke-width: 3px;
-    }
-  </style>
-  <rect width="560" height="180" rx="24" fill="none" />
-  <text class="wordmark" x="24" y="118">Gunks Routes</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Gunks Climbing Guide favicon</title>
+  <rect width="96" height="96" rx="24" fill="#4d466e"/>
+  <text
+    x="48"
+    y="72"
+    fill="#fffaf0"
+    font-family="Open Sans, Arial, sans-serif"
+    font-size="76"
+    font-weight="800"
+    letter-spacing="-4"
+    text-anchor="middle"
+  >G</text>
 </svg>
