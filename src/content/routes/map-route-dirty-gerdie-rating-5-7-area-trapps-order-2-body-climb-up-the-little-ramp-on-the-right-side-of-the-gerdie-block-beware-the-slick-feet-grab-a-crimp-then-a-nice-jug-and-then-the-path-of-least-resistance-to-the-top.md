@@ -1,8 +1,8 @@
 ---
-route: Dirty Gerdie
+route: Herdie Gerdie
 rating: 5.7+
 area: Trapps
-order: 2
+order: 1.2
 ---
 Climb up the little ramp on the right side of the Gerdie block. Beware the slick feet. Grab a crimp, then a nice jug, and then the path of least resistance to the top. 
 
